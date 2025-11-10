@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>自我介紹 - 學生履歷</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- ===== Nav ===== -->
+  <div class="nav-wrap">
+    <div class="container">
+      <nav class="nav">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <span>學生履歷</span>
+        </div>
+        <div class="spacer"></div>
+        <div class="menu" id="menu">
+          <a href="#about">自我介紹</a>
+          <a href="#skills">技能</a>
+          <a href="#ownexperience">個人經歷</a>
+          <a href="#experience">大學經歷</a>
+          <a href="#contact">聯絡方式</a>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="開啟選單">選單 ☰</button>
+      </nav>
+
+      <!-- 行動版抽屜選單（桌機隱藏，只會有一組，不會左右各一個） -->
+      <div class="drawer" id="drawer">
+        <a href="#about">自我介紹</a>
+        <a href="#skills">技能</a>
+        <a href="#ownexperience">個人經歷</a>
+        <a href="#experience">大學經歷</a>
+        <a href="#contact">聯絡方式</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Hero ===== -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <img src="image/img.01.jpg" alt="個人照片" class="profile-photo" loading="lazy" />
+        <div>
+          <span class="badge">One-page Resume</span>
+          <h1>牛致傑</h1>
+          <p>中原大學｜資管系｜大三</p>
+          <p>Email：<a href="mailto:jik531756@gmail.com">jik531756@gmail.com</a></p>
+
+          <aside class="aside-box">
+            <strong>標語：</strong>「很多人都幻想回到過去改變現況，但大部分人都不願意當下行動去改變未來」
+          </aside>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== About ===== -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head">
+          <h2>自我介紹</h2>
+          <div class="desc">一句話認識我</div>
+        </div>
+
+        <article class="card">
+          <p>個性樂觀、腳踏實地，熱心助人</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head">
+          <h2>程式技能</h2>
+          <div class="desc">核心能力</div>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill">
+            <label>Python</label>
+            <div class="bar" data-pct="80"><span></span></div>
+          </div>
+
+          <div class="skill">
+            <label>JavaScript</label>
+            <div class="bar" data-pct="75"><span></span></div>
+          </div>
+
+          <div class="skill">
+            <label>資料分析</label>
+            <div class="bar" data-pct="70"><span></span></div>
+          </div>
+
+          <div class="skill">
+            <label>簡報製作</label>
+            <div class="bar" data-pct="85"><span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Own Experience（個人經歷） ===== -->
+    <section id="ownexperience">
+      <div class="container">
+        <div class="section-head">
+          <h2>個人經歷</h2>
+        </div>
+
+        <div class="activities-grid">
+          <!-- Card 1 -->
+          <article class="card activity-card">
+            <img src="image/img.05.jpg" alt="忠明高中籃球隊" class="activity-photo" loading="lazy">
+            <span class="tag">課外活動</span>
+            <h3>忠明高中籃球隊</h3>
+            <div class="meta">高中三年</div>
+            <p>
+              我加入乙組籃球隊，三年來兼顧課業與訓練。透過體能、戰術與基本功的長期累積，學會在有限時間內全力以赴；
+              即使歷經挫折仍不放棄，培養了耐心與韌性，也讓我學會在團隊中溝通協作、互相支援。
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card activity-card">
+            <img src="image/img.07.jpg" alt="台灣國際昆蟲博覽會工作人員" class="activity-photo" loading="lazy">
+            <span class="tag">活動經驗</span>
+            <h3>台灣國際昆蟲博覽會工作人員</h3>
+            <div class="meta">大一下</div>
+            <p>
+              與同好一同參展，從攤位佈置、動線安排到收尾結束，接觸專業飼育者與業界前輩，了解產業生態。
+              忙碌之餘也精進了應對、協作與臨場反應能力，是很難得的實務體驗。
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card activity-card">
+            <img src="image/img.06.jpg" alt="學生會公關組" class="activity-photo" loading="lazy">
+            <span class="tag">校園事務</span>
+            <h3>學生會—公關組</h3>
+            <div class="meta">高中三年</div>
+            <p>
+              協助對外窗口與社群經營，實際接洽商圈特約與活動合作。訓練膽量與談判技巧，並透過團隊分工與排程管理，
+              更理解如何把一場活動從企劃落地到執行。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== University Experience（大學經歷） ===== -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head">
+          <h2>大學經歷</h2>
+        </div>
+
+        <div class="activities-grid">
+          <!-- Card 1 -->
+          <article class="card activity-card">
+            <img src="image/img.02.jpg" alt="手作衛生棉課程" class="activity-photo" loading="lazy">
+            <span class="tag">課程活動</span>
+            <h3>對抗月經貧窮：手作衛生棉</h3>
+            <div class="meta">大一下</div>
+            <p>
+              參與布衛生棉縫製，理解月經貧窮背後的資源落差。從材料挑選到製作流程，體會女性在生理用品取得上的困境，
+              也更認識月經平權議題。
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="card activity-card">
+            <img src="image/img.03.jpg" alt="飲料店晚班" class="activity-photo" loading="lazy">
+            <span class="tag">工作經驗</span>
+            <h3>飲料店晚班</h3>
+            <div class="meta">一年</div>
+            <p>
+              累積顧客應對與流程管理，學會在尖峰時段維持效率與品質；同時培養抗壓性與責任感，確保任務準時完成。
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="card activity-card">
+            <img src="image/img.04.jpg" alt="生態課講師" class="activity-photo" loading="lazy">
+            <span class="tag">教學分享</span>
+            <h3>國中小學生態課講師</h3>
+            <div class="meta">半年</div>
+            <p>
+              規劃課程、設計講義與教具，現場互動中精進敘事與控場技巧；依學員回饋持續調整，提升教學成效。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>聯絡方式</h2>
+        </div>
+
+        <article class="card contact">
+          <ul>
+            <li>Email：<a href="mailto:jik531756@gmail.com">jik531756@gmail.com</a></li>
+            <li>手機：0916 101 108</li>
+            <li>Instagram：<a href="https://www.instagram.com/zhijie_12.10" target="_blank" rel="noopener">點我</a></li>
+            <li>Facebook：<a href="https://www.facebook.com/share/yH2Sbna8U2HPoAtX" target="_blank" rel="noopener">點我</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">多媒體程式設計 — 個人網站</div>
+  </footer>
+
+  <script>
+    // 手機版選單（桌機不會出現第二組）
+    const hb = document.getElementById('hamburger');
+    const drawer = document.getElementById('drawer');
+    hb.addEventListener('click', () => {
+      drawer.classList.toggle('open');
+    });
+
+    // 技能條動畫
+    const bars = document.querySelectorAll('.bar');
+    const once = new Set();
+
+    function inView(el){
+      const r = el.getBoundingClientRect();
+      return r.top < window.innerHeight * 0.8 && r.bottom > 0;
+    }
+
+    function animateBars(){
+      bars.forEach(b=>{
+        if(!once.has(b) && inView(b)){
+          b.querySelector('span').style.width = b.dataset.pct + '%';
+          once.add(b);
+        }
+      });
+    }
+
+    document.addEventListener('scroll', animateBars);
+    window.addEventListener('load', animateBars);
+  </script>
+</body>
+</html>
