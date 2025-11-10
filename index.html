@@ -175,3 +175,64 @@
             <img src="image/img.04.jpg" alt="生態課講師" class="activity-photo" loading="lazy">
             <span class="tag">教學分享</span>
             <h3>國中小學生態課講師</h3>
+            <div class="meta">半年</div>
+            <p>
+              在授課昆蟲與生態相關主題的過程中，我不僅熟悉教材內容，也學習如何進行課程設計、安排教學節奏與引導學生思考。
+              同時，我在實際面對學生時逐漸掌握控場技巧，能有效維持課堂秩序並提升互動品質，整體教學能力也因此大幅提升。
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="section-head">
+          <h2>聯絡方式</h2>
+        </div>
+
+        <article class="card contact">
+          <ul>
+            <li>Email：<a href="mailto:jik531756@gmail.com">jik531756@gmail.com</a></li>
+            <li>手機：0916 101 108</li>
+            <li>Instagram：<a href="https://www.instagram.com/zhijie_12.10" target="_blank" rel="noopener">點我</a></li>
+            <li>Facebook：<a href="https://www.facebook.com/share/yH2Sbna8U2HPoAtX" target="_blank" rel="noopener">點我</a></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">多媒體程式設計 — 個人網站</div>
+  </footer>
+
+  <script>
+    const hb = document.getElementById('hamburger');
+    const drawer = document.getElementById('drawer');
+    hb.addEventListener('click', () => {
+      drawer.classList.toggle('open');
+    });
+
+    const bars = document.querySelectorAll('.bar');
+    const once = new Set();
+
+    function inView(el){
+      const r = el.getBoundingClientRect();
+      return r.top < window.innerHeight * 0.8 && r.bottom > 0;
+    }
+
+    function animateBars(){
+      bars.forEach(b=>{
+        if(!once.has(b) && inView(b)){
+          b.querySelector('span').style.width = b.dataset.pct + '%';
+          once.add(b);
+        }
+      });
+    }
+
+    document.addEventListener('scroll', animateBars);
+    window.addEventListener('load', animateBars);
+  </script>
+</body>
+</html>
