@@ -1,23 +1,15 @@
-/* =========================
-   Light + Milk Tea Theme
-   ========================= */
-
-/* ---- Theme Tokens ---- */
 :root{
-  /* 奶茶系主色與明亮底色 */
-  --bg:#faf7f2;                /* 整體背景（很淡的奶茶白） */
-  --surface:#ffffff;           /* 區塊/卡片底 */
-  --surface-2:#fffaf3;         /* 次要區塊底（微奶茶） */
-  --text:#2e2a25;              /* 主要字色（深咖啡） */
-  --muted:#6b6b6b;             /* 次要字色 */
-  --brand:#c9a97b;             /* 奶茶主色（淺焦糖） */
-  --brand-2:#b38b59;           /* 主色加深（焦糖） */
-  --border:rgba(0,0,0,.1);     /* 邊框 */
-  --ring:rgba(179,139,89,.25); /* 內陰影/聚焦 */
+  --bg:#faf7f2;
+  --surface:#ffffff;
+  --surface-2:#fffaf3;
+  --text:#2e2a25;
+  --muted:#6b6b6b;
+  --brand:#c9a97b;
+  --brand-2:#b38b59;
+  --border:rgba(0,0,0,.1);
+  --ring:rgba(179,139,89,.25);
   --card:linear-gradient(180deg, rgba(255,255,255,.7), rgba(255,255,255,.9));
 }
-
-/* ---- Base ---- */
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -36,8 +28,6 @@ img{max-width:100%; display:block}
 a{color:var(--brand-2); text-decoration:none}
 a:hover{text-decoration:underline}
 .container{max-width:1100px; margin:0 auto; padding:0 20px}
-
-/* ---- Nav ---- */
 .nav-wrap{
   position:sticky; top:0; z-index:30;
   backdrop-filter:saturate(140%) blur(6px);
@@ -58,11 +48,7 @@ nav{display:flex; align-items:center; gap:14px; padding:10px 0}
 }
 .menu a:hover{background:rgba(0,0,0,.04); color:var(--text)}
 .hamburger{display:none}
-
-/* 手機抽屜預設關閉，避免桌面版看到兩組 */
 .drawer{display:none}
-
-/* ---- RWD：小螢幕才顯示抽屜，大螢幕只顯示 menu ---- */
 @media (max-width:760px){
   .menu{display:none}
   .hamburger{
@@ -80,8 +66,6 @@ nav{display:flex; align-items:center; gap:14px; padding:10px 0}
   .drawer a:hover{color:var(--text); background:rgba(0,0,0,.04)}
   .drawer.open{display:block}
 }
-
-/* ---- Hero ---- */
 .hero{
   padding:60px 0 32px;
   background:var(--surface);
@@ -100,32 +84,22 @@ nav{display:flex; align-items:center; gap:14px; padding:10px 0}
   border:1px solid var(--border); font-weight:800; font-size:12px;
   color:#6b5e4b; background:#fff8ee
 }
-
-/* ---- Sections ---- */
 section{padding:40px 0}
 .section-head{display:flex; align-items:end; justify-content:space-between; gap:16px; margin-bottom:14px}
 h2{margin:0; font-size:24px; color:#3b332b}
 .desc{color:#7a7368; font-size:14px}
-
-/* ---- Cards ---- */
 .card{
   border:1px solid var(--border); border-radius:14px;
   background:var(--card); padding:18px;
   box-shadow:0 6px 14px rgba(0,0,0,.05), inset 0 0 0 1px rgba(255,255,255,.6)
 }
-
-/* ---- Slogan ---- */
 .slogan p{font-weight:700; font-size:18px}
-
-/* ---- Education ---- */
 .edu-list{display:grid; gap:12px}
 .school{
   display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
   border:1px solid var(--border); border-radius:12px; padding:14px; background:var(--surface-2)
 }
 .degree{color:#7a7368}
-
-/* ---- Skills ---- */
 .skills-grid{display:grid; gap:12px}
 .skill{display:grid; gap:8px}
 .skill label{font-weight:700; color:#3b332b}
@@ -133,7 +107,6 @@ h2{margin:0; font-size:24px; color:#3b332b}
   height:10px; border-radius:999px; background:#f1e7d8;
   border:1px solid var(--border); overflow:hidden
 }
-/* 進度條用奶茶到焦糖的漸層 */
 .bar > span{
   display:block; height:100%; width:0;
   background:linear-gradient(90deg, var(--brand), var(--brand-2));
@@ -144,8 +117,6 @@ h2{margin:0; font-size:24px; color:#3b332b}
 .bar[data-pct="80"] > span{width:80%}
 .bar[data-pct="75"] > span{width:75%}
 .bar[data-pct="70"] > span{width:70%}
-
-/* ---- Activities ---- */
 .activities-grid{display:grid; gap:16px}
 @media (min-width:760px){.activities-grid{grid-template-columns:repeat(3, 1fr)}}
 .activity-card{display:flex; flex-direction:column; gap:10px}
@@ -159,15 +130,11 @@ h2{margin:0; font-size:24px; color:#3b332b}
   color:#7a7368; font-size:12px; background:#fff8ee
 }
 .meta{color:#7a7368; font-size:12px}
-
-/* ---- Contact & Footer ---- */
 .contact ul{margin:8px 0 0; padding-left:18px}
 footer{
   padding:28px 0; color:#7a7368; border-top:1px solid var(--border);
   background:var(--surface)
 }
-
-/* ---- Floating Glow (淡化到幾乎不可見，保留微光) ---- */
 .glow{
   position:absolute; left:50%; transform:translateX(-50%); top:-240px;
   width:900px; height:900px; filter:blur(90px); opacity:.25; pointer-events:none; z-index:-1;
@@ -175,5 +142,4 @@ footer{
     radial-gradient(closest-side, rgba(201,169,123,.25), transparent 70%),
     radial-gradient(closest-side, rgba(179,139,89,.25), transparent 70%)
 }
-
 
