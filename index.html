@@ -8,7 +8,6 @@
 </head>
 
 <body>
-  <!-- ===== Nav ===== -->
   <div class="nav-wrap">
     <div class="container">
       <nav class="nav">
@@ -27,7 +26,6 @@
         <button class="hamburger" id="hamburger" aria-label="開啟選單">選單 ☰</button>
       </nav>
 
-      <!-- 行動版抽屜選單（桌機隱藏，只會有一組，不會左右各一個） -->
       <div class="drawer" id="drawer">
         <a href="#about">自我介紹</a>
         <a href="#skills">技能</a>
@@ -38,7 +36,6 @@
     </div>
   </div>
 
-  <!-- ===== Hero ===== -->
   <header class="hero">
     <div class="container">
       <div class="hero-inner">
@@ -58,7 +55,6 @@
   </header>
 
   <main>
-    <!-- ===== About ===== -->
     <section id="about">
       <div class="container">
         <div class="section-head">
@@ -72,7 +68,6 @@
       </div>
     </section>
 
-    <!-- ===== Skills ===== -->
     <section id="skills">
       <div class="container">
         <div class="section-head">
@@ -104,7 +99,6 @@
       </div>
     </section>
 
-    <!-- ===== Own Experience（個人經歷） ===== -->
     <section id="ownexperience">
       <div class="container">
         <div class="section-head">
@@ -112,7 +106,6 @@
         </div>
 
         <div class="activities-grid">
-          <!-- Card 1 -->
           <article class="card activity-card">
             <img src="image/img.05.jpg" alt="忠明高中籃球隊" class="activity-photo" loading="lazy">
             <span class="tag">課外活動</span>
@@ -124,7 +117,6 @@
             </p>
           </article>
 
-          <!-- Card 2 -->
           <article class="card activity-card">
             <img src="image/img.07.jpg" alt="台灣國際昆蟲博覽會工作人員" class="activity-photo" loading="lazy">
             <span class="tag">活動經驗</span>
@@ -136,7 +128,6 @@
             </p>
           </article>
 
-          <!-- Card 3 -->
           <article class="card activity-card">
             <img src="image/img.06.jpg" alt="學生會公關組" class="activity-photo" loading="lazy">
             <span class="tag">校園事務</span>
@@ -151,7 +142,6 @@
       </div>
     </section>
 
-    <!-- ===== University Experience（大學經歷） ===== -->
     <section id="experience">
       <div class="container">
         <div class="section-head">
@@ -159,7 +149,6 @@
         </div>
 
         <div class="activities-grid">
-          <!-- Card 1 -->
           <article class="card activity-card">
             <img src="image/img.02.jpg" alt="手作衛生棉課程" class="activity-photo" loading="lazy">
             <span class="tag">課程活動</span>
@@ -171,7 +160,6 @@
             </p>
           </article>
 
-          <!-- Card 2 -->
           <article class="card activity-card">
             <img src="image/img.03.jpg" alt="飲料店晚班" class="activity-photo" loading="lazy">
             <span class="tag">工作經驗</span>
@@ -182,71 +170,7 @@
             </p>
           </article>
 
-          <!-- Card 3 -->
           <article class="card activity-card">
             <img src="image/img.04.jpg" alt="生態課講師" class="activity-photo" loading="lazy">
             <span class="tag">教學分享</span>
             <h3>國中小學生態課講師</h3>
-            <div class="meta">半年</div>
-            <p>
-              規劃課程、設計講義與教具，現場互動中精進敘事與控場技巧；依學員回饋持續調整，提升教學成效。
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== Contact ===== -->
-    <section id="contact">
-      <div class="container">
-        <div class="section-head">
-          <h2>聯絡方式</h2>
-        </div>
-
-        <article class="card contact">
-          <ul>
-            <li>Email：<a href="mailto:jik531756@gmail.com">jik531756@gmail.com</a></li>
-            <li>手機：0916 101 108</li>
-            <li>Instagram：<a href="https://www.instagram.com/zhijie_12.10" target="_blank" rel="noopener">點我</a></li>
-            <li>Facebook：<a href="https://www.facebook.com/share/yH2Sbna8U2HPoAtX" target="_blank" rel="noopener">點我</a></li>
-          </ul>
-        </article>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="container">多媒體程式設計 — 個人網站</div>
-  </footer>
-
-  <script>
-    // 手機版選單（桌機不會出現第二組）
-    const hb = document.getElementById('hamburger');
-    const drawer = document.getElementById('drawer');
-    hb.addEventListener('click', () => {
-      drawer.classList.toggle('open');
-    });
-
-    // 技能條動畫
-    const bars = document.querySelectorAll('.bar');
-    const once = new Set();
-
-    function inView(el){
-      const r = el.getBoundingClientRect();
-      return r.top < window.innerHeight * 0.8 && r.bottom > 0;
-    }
-
-    function animateBars(){
-      bars.forEach(b=>{
-        if(!once.has(b) && inView(b)){
-          b.querySelector('span').style.width = b.dataset.pct + '%';
-          once.add(b);
-        }
-      });
-    }
-
-    document.addEventListener('scroll', animateBars);
-    window.addEventListener('load', animateBars);
-  </script>
-</body>
-</html>
